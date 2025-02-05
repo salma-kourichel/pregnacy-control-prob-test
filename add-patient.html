@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Patient</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Add Patient</h1>
+    <form id="addPatientForm">
+      <label>Name: <input type="text" name="name" required /></label><br />
+      <label>Age: <input type="number" name="age" required /></label><br />
+      <label>Gender: 
+        <select name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </label><br />
+      <label>Pregnant: 
+        <select name="pregnant" id="pregnant" required>
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </label><br />
+      <div id="pregnancyFields" style="display: none;">
+        <label>Months Pregnant: <input type="number" name="monthsPregnant" id="monthsPregnant" /></label><br />
+        <label>Estimated Delivery Date: <input type="text" id="deliveryDate" readonly /></label><br />
+      </div>
+      <label>Systolic BP (mmHg): <input type="number" name="systolicBP" step="0.1" required /></label><br />
+      <label>Diastolic BP (mmHg): <input type="number" name="diastolicBP" step="0.1" required /></label><br />
+      <label>Blood Sugar (mmol/L): <input type="number" name="bloodSugar" step="0.1" required /></label><br />
+      <label>Heart Rate (bpm): <input type="number" name="heartRate" required /></label><br />
+      <label>Body Temperature (°F): <input type="number" name="bodyTemp" step="0.1" required /></label><br />
+      <label>Medical History: <textarea name="medicalHistory"></textarea></label><br />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="js/add-patient.js"></script>
+</body>
+</html>
